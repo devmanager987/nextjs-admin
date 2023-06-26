@@ -16,7 +16,9 @@ import { classNames } from 'primereact/utils';
 import React, { useEffect, useRef, useState } from 'react';
 import { ProductService } from '../../../demo/service/ProductService';
 import { Demo } from '../../../types/types';
-import { ProdutoEditar, ProdutoExcluir, ProdutoExcluirVarios } from './dialogs';
+import ProdutoEditar from './detalhes.dialog';
+import ProdutoExcluir from './excluir.dialog';
+import ProdutoExcluirVarios from './excluir-varios.dialog';
 
 const ProdutoCrud = () => {
     let emptyProduct: Demo.Product = {

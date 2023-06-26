@@ -69,44 +69,4 @@ const ProdutoEditar = ({ product, productDialog, submitted, productDialogFooter,
     )
 }
 
-interface ProdutoExcluirProps {
-    product: Demo.Product
-    deleteProductDialog: boolean
-    deleteProductDialogFooter: JSX.Element
-    hideDeleteProductDialog: () => void
-}
-
-const ProdutoExcluir = ({ product, deleteProductDialog, deleteProductDialogFooter, hideDeleteProductDialog }: ProdutoExcluirProps) => {
-    return (
-        <Dialog visible={deleteProductDialog} style={{ width: '450px' }} header="Confirm" modal footer={deleteProductDialogFooter} onHide={hideDeleteProductDialog}>
-            <div className="flex align-items-center justify-content-center">
-                <i className="pi pi-exclamation-triangle mr-3" style={{ fontSize: '2rem' }} />
-                {product && (
-                    <span>
-                        Tem certeza de que deseja excluir <b>{product.name}</b>?
-                    </span>
-                )}
-            </div>
-        </Dialog>
-    )
-}
-
-interface ProdutoExcluirVariosProps {
-    product: Demo.Product
-    deleteProductsDialog: boolean
-    deleteProductsDialogFooter: JSX.Element
-    hideDeleteProductsDialog: () => void
-}
-
-const ProdutoExcluirVarios = ({ product, deleteProductsDialog, deleteProductsDialogFooter, hideDeleteProductsDialog }: ProdutoExcluirVariosProps) => {
-    return (
-        <Dialog visible={deleteProductsDialog} style={{ width: '450px' }} header="Confirm" modal footer={deleteProductsDialogFooter} onHide={hideDeleteProductsDialog}>
-            <div className="flex align-items-center justify-content-center">
-                <i className="pi pi-exclamation-triangle mr-3" style={{ fontSize: '2rem' }} />
-                {product && <span>Tem certeza de que deseja excluir os produtos selecionados?</span>}
-            </div>
-        </Dialog>
-    )
-}
-
-export { ProdutoEditar, ProdutoExcluir, ProdutoExcluirVarios }
+export default ProdutoEditar
