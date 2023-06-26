@@ -21,7 +21,7 @@ interface ProdutoEditarProps {
 const ProdutoEditar = ({ product, productDialog, submitted, productDialogFooter,
     hideDialog, onCategoryChange, onInputChange, onInputNumberChange }: ProdutoEditarProps) => {
     return (
-        <Dialog visible={productDialog} style={{ width: '450px' }} header="Product Details" modal className="p-fluid" footer={productDialogFooter} onHide={hideDialog}>
+        <Dialog visible={productDialog} style={{ width: '450px' }} header="Detalhes do Produto" modal className="p-fluid" footer={productDialogFooter} onHide={hideDialog}>
             {product?.image && <img src={`/demo/images/product/${product?.image}`} alt={product?.image} width="150" className="mt-0 mx-auto mb-5 block shadow-2" />}
             <div className="field">
                 <label htmlFor="name">Nome</label>
@@ -34,7 +34,7 @@ const ProdutoEditar = ({ product, productDialog, submitted, productDialogFooter,
             </div>
 
             <div className="field">
-                <label className="mb-3">Category</label>
+                <label className="mb-3">Categoria</label>
                 <div className="formgrid grid">
                     <div className="field-radiobutton col-6">
                         <RadioButton inputId="category1" name="category" value="Accessories" onChange={onCategoryChange} checked={product?.category === 'Accessories'} />
