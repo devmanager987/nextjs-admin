@@ -192,7 +192,7 @@ const ProdutoCrud = () => {
     const codeBodyTemplate = (rowData: Demo.Product) => {
         return (
             <>
-                <span className="p-column-title">Code</span>
+                <span className="p-column-title">Código</span>
                 {rowData.code}
             </>
         );
@@ -201,7 +201,7 @@ const ProdutoCrud = () => {
     const nameBodyTemplate = (rowData: Demo.Product) => {
         return (
             <>
-                <span className="p-column-title">Name</span>
+                <span className="p-column-title">Nome</span>
                 {rowData.name}
             </>
         );
@@ -210,7 +210,7 @@ const ProdutoCrud = () => {
     const imageBodyTemplate = (rowData: Demo.Product) => {
         return (
             <>
-                <span className="p-column-title">Image</span>
+                <span className="p-column-title">Imagem</span>
                 <img src={`/demo/images/product/${rowData.image}`} alt={rowData.image} className="shadow-2" width="100" />
             </>
         );
@@ -219,7 +219,7 @@ const ProdutoCrud = () => {
     const priceBodyTemplate = (rowData: Demo.Product) => {
         return (
             <>
-                <span className="p-column-title">Price</span>
+                <span className="p-column-title">Preço</span>
                 {formatCurrency(rowData.price as number)}
             </>
         );
@@ -228,7 +228,7 @@ const ProdutoCrud = () => {
     const categoryBodyTemplate = (rowData: Demo.Product) => {
         return (
             <>
-                <span className="p-column-title">Category</span>
+                <span className="p-column-title">Categoria</span>
                 {rowData.category}
             </>
         );
@@ -237,7 +237,7 @@ const ProdutoCrud = () => {
     const ratingBodyTemplate = (rowData: Demo.Product) => {
         return (
             <>
-                <span className="p-column-title">Reviews</span>
+                <span className="p-column-title">Revisões</span>
                 <Rating value={rowData.rating} readOnly cancel={false} />
             </>
         );
@@ -273,20 +273,20 @@ const ProdutoCrud = () => {
 
     const productDialogFooter = (
         <>
-            <Button label="Cancel" icon="pi pi-times" text onClick={hideDialog} />
-            <Button label="Save" icon="pi pi-check" text onClick={saveProduct} />
+            <Button label="Cancelar" icon="pi pi-times" text onClick={hideDialog} />
+            <Button label="Salvar" icon="pi pi-check" text onClick={saveProduct} />
         </>
     );
     const deleteProductDialogFooter = (
         <>
-            <Button label="No" icon="pi pi-times" text onClick={hideDeleteProductDialog} />
-            <Button label="Yes" icon="pi pi-check" text onClick={deleteProduct} />
+            <Button label="Não" icon="pi pi-times" text onClick={hideDeleteProductDialog} />
+            <Button label="Sim" icon="pi pi-check" text onClick={deleteProduct} />
         </>
     );
     const deleteProductsDialogFooter = (
         <>
-            <Button label="No" icon="pi pi-times" text onClick={hideDeleteProductsDialog} />
-            <Button label="Yes" icon="pi pi-check" text onClick={deleteSelectedProducts} />
+            <Button label="Não" icon="pi pi-times" text onClick={hideDeleteProductsDialog} />
+            <Button label="Sim" icon="pi pi-check" text onClick={deleteSelectedProducts} />
         </>
     );
 
@@ -308,9 +308,9 @@ const ProdutoCrud = () => {
                         rowsPerPageOptions={[5, 10, 25]}
                         className="datatable-responsive"
                         paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
-                        currentPageReportTemplate="Showing {first} to {last} of {totalRecords} products"
+                        currentPageReportTemplate="Exibindo {first} até {last} de {totalRecords} produtos"
                         globalFilter={globalFilter}
-                        emptyMessage="No products found."
+                        emptyMessage="Nenhum produto foi encontrado."
                         header={header}
                         responsiveLayout="scroll"
                     >
